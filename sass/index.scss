@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.landing{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(140deg,rgb(99, 37, 91),rgb(0, 0, 57),rgb(28, 30, 129));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .text{
+        color: white;
+        font-family:monospace;
+        margin-top: 10%;
+        width: 70%;
+        //border: 1px solid;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+       // background-color: rgb(21, 78, 129);
+        justify-content: center;
+        height: 6vmin;
+        z-index: 1;
+        h1{
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 1.5em;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 2s steps(22);
+            border-right: 1.5px solid white;
+        }
+    }
+    .t1,.t2,.t3 {
+        color: rgb(239, 166, 166);
+        font-family:monospace;
+        margin-top: 10%;
+        width: 60%;
+        //border: 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 5vmin;
+
+        h4{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            white-space: nowrap;
+            display: none;
+            overflow: hidden;
+           // animation: typing 2s steps(20) ;
+            border-right: 1.5px solid white;
+            animation: blink 1s infinite;
+        }
+    }
+    @keyframes typing {
+        from{
+            width: 0%;
+        }
+    }
+    @keyframes blink {
+    from{
+        border-right: 1px solid transparent;
+    } 
+    
+    }
+    .imgBG{ 
+        width: 90%;
+        position:relative;
+        animation: imgAnime 9s infinite ;
+        transition: smooth ;
+    }
+    .swipe{
+        width: 10%;
+        position: relative;
+        top: 20%;
+        filter: invert(1);
+        transform: smooth ;
+        opacity: 0.5;
+    }
+    .addAnimeToSwipe{
+        animation: swipeanime2 2s infinite,swipeanime 1.8s 3;
+    }
+    @keyframes swipeanime2 {
+        from{
+            opacity: 0.1;
+        }
+    }
+    @keyframes swipeanime {
+        from{
+            top: 15%;
+        }
+    }
+    @keyframes imgAnime{
+        0%{
+            transform: scale(80%);
+        }
+        25%{
+            transform: scale(100%);
+        }
+        50%{
+            transform: scale(90%);
+        }
+        75%{
+            transform: scale(100%);
+        }
+        100%{
+            transform: scale(80%);
+        }
+    }
+}
+%centi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+//header\
+#head{
+    height: 15vmin;
+    border: 1px solid;
+    display: flex;
+    background: linear-gradient(240deg,rgb(0, 0, 57),rgb(28, 30, 129));
+    align-items: center;
+    .logo{
+        width: 30%;
+        @extend %centi;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: white;
+    }
+    ul{
+        width: 70%;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        font-family:Arial, Helvetica, sans-serif;
+        justify-content: space-evenly;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a:hover{
+            filter: drop-shadow(0px 0px 4px rgb(144, 138, 255));
+        }
+    }
+}
