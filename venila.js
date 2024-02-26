@@ -23,3 +23,56 @@ setTimeout(() => {
 const swipe = document.querySelector('.swipe')
 
 setInterval(() => swipe.classList.add('addAnimeToSwipe') , 9000)
+
+//for scroll transition
+function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  
+  window.addEventListener("scroll", reveal);
+
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  
+  window.addEventListener("scroll", reveal)
+  
+  const skills = [{L:'CSS',P:'75%'},{L:'JAVASCRIPT',P:'70%'},{L:'SASS',P:'70%'},{L:'BOOTSTARP',P:'60%'},{L:'REACT JS',P:'50%'},{L:'PYTHON',P:'65%'},{L:'NODE JS',P:'50%'}]
+  
+  const sec_b = document.getElementById('sec-b')
+  
+  skills.map((e) => {
+      const newskill = document.createElement('div')
+      newskill.innerHTML = `<b>${e.L}</b>
+              <div class="inbox " style="width:${e.P};" >${parseInt(e.P) + 25}%&nbsp;</div>`
+      
+      newskill.classList.add('outbox')
+      sec_b.append(newskill)
+  })
+  
+
+  const inbox = document.getElementById('inbox')

@@ -1,10 +1,13 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
-.landing{
+body{
     width: 100vw;
+}
+.landing{
+    //width: 100vw;
     height: 100vh;
     background: linear-gradient(140deg,rgb(99, 37, 91),rgb(0, 0, 57),rgb(28, 30, 129));
     display: flex;
@@ -124,6 +127,10 @@
 #head{
     height: 15vmin;
     border: 1px solid;
+   // width: 100vw;
+   position: sticky;
+   top: 0;
+   z-index: 5;
     display: flex;
     background: linear-gradient(240deg,rgb(0, 0, 57),rgb(28, 30, 129));
     align-items: center;
@@ -148,4 +155,172 @@
             filter: drop-shadow(0px 0px 4px rgb(144, 138, 255));
         }
     }
+}
+
+//for scroll aimes
+.reveal{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s all linear;
+  }
+  
+  .reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+#sec-a{
+    //width: 100vw;
+    height: auto;
+    margin-top: 5%;
+    //border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    img{
+        width: 65%;
+        box-shadow: 0px 0px 10px 4px rgb(226, 226, 226);
+       // border: 1px solid greenyellow;
+       border-radius: 1vmin;
+    }
+    img:hover{
+        transition: 0.1s all ;
+        transform: translateY(-20px)
+    }
+    .a1,.a2{
+        @extend %centi;
+        flex-direction: column;
+        justify-content: space-evenly;
+        h2{
+        margin: 7% 0;
+         font-size: 0.9rem;
+        text-align: center;
+        color: gray;
+        width: 80%
+        }
+    }
+    
+}
+//sec b
+.sec-b-head{
+    @extend %centi;
+    flex-direction: column;
+    h1{
+        margin:  0;
+        text-decoration: underline rgb(37, 37, 122);
+    }
+    img{
+        width: 80%;
+        margin: 5% 0;
+        filter: hue-rotate(50deg);
+    }
+    p{
+        margin: 3% 0;
+        width: 80%;
+        color: grey;
+        text-align: center;
+    }
+}
+#sec-b{
+    //border: 1px solid;
+    height:max-content;
+    @extend %centi;
+    flex-direction: column;
+    margin: 10% 0;
+}
+.outbox{
+    width: 90%;
+    //box-shadow: 0px 0px 10px 4px grey;
+    background-color:#cfcfcf;
+    height: 5vmin;
+    @extend %centi;
+    margin: 1% 0;
+    justify-content: start;
+    b{
+        width: 25%;
+        height: 100%;
+        word-wrap: normal;
+       // margin: 0 2%;
+        @extend %centi;
+        background: #cfcfcf;
+        font-size: 3vmin;
+    }
+    .inbox{
+        width: 75%;
+        height: 100%;
+        color: white;
+        @extend %centi;
+        justify-content: end;
+
+        background:linear-gradient(240deg,rgb(0, 0, 57),rgb(28, 30, 129));
+    }
+}
+//sec-c
+#sec-c{
+    @extend %centi;
+    text-align: center;
+    .sec-c-heading{
+        h1{
+        margin: 5% 0;
+        text-decoration: underline rgb(37, 37, 122);
+        }
+        p{
+            margin: 2% 0;
+            color: gray;
+        }
+    }
+    .sec-c-cont{
+        //border: 1px solid;
+        height: auto;
+        @extend %centi;
+        flex-direction: column;
+        justify-content: start;
+    }
+}
+//project
+.project{
+    //border: 1px solid red;
+    height:60vh;
+    box-shadow: 0px 0px 18px 10px rgb(210, 210, 210);
+    border-radius: 2vmin;
+    width: 70%;
+    @extend %centi;
+    flex-direction: column;
+    justify-content: space-evenly;
+    //text-align: left;
+    margin: 5% 0;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 50%;
+        object-fit:cover;
+        object-position:top;
+        //height: 70%;
+        transition: all 0.5s;
+        border-radius: 2vmin;
+    }
+    img:hover{
+        width: 130%;
+        height: 110%;
+    }
+    h4{
+        border-top: 0.5px solid rgb(202, 202, 202);
+        margin: 3% 0;
+        text-align: center;
+    }
+    p{
+        text-align: center;
+        margin: 5% 0;
+        width: 60%;
+    
+    }
+    a{
+        background-color: #0095ff;
+        color: white;
+        border-radius: 1vmin;
+        text-decoration: none;
+        padding: 1% 5%;
+        margin: 5%;
+    }
+
 }
