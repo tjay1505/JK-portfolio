@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./sass/index.css">
 </head>
 <body>
-      <!-- -->
+      
    <div class="landing">
         <img src="./971-removebg.png" class="imgBG" alt="land.png">
         <div class="text">
@@ -36,15 +36,25 @@
         <div class="logo">
             <h1>jk</h1>
         </div>
+
         <ul>
             <li><a href="#">home</a></li>
             <li><a href="#">skills</a></li>
             <li><a href="#">projects</a></li>
             <li><a href="#">contact</a></li>
+            <a href="#" onclick="homeRefresh()" >home</a>
+            <img src="./icons/menu.png" onclick="menuToggle()" alt="">
         </ul>
     </header>
-    
-    <!-- <div style="height: 100vh;" ></div> -->
+        <div id="menuBoxFor">
+            <ul id="menu-a" >
+                <a href="#sec-bx">skills</a>
+                <a href="#sec-c">projects</a>
+                <a href="#experience">experience</a>
+                <a href="#contact">contact</a>
+            </ul>
+            
+        </div>
 
     <div id="sec-a">
 
@@ -72,22 +82,19 @@
         
     </div> 
     <div class="sec-b-head">
-        <h1 class="reveal">skills</h1>
+        <h1 class="reveal" id="sec-bx">skills</h1>
         <img src="./3426526-removebg-preview.png" class="reveal" alt="hgkg">
-        <p class="reveal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur blanditiis adipisci dicta, dolor vitae maiores.mrrmr grh</p>
+        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur blanditiis adipisci dicta, dolor vitae maiores.mrrmr grh</p>
     </div>
 
     <div id="sec-b">
-        <div class="outbox">
-            <b>HTML</b>
-            <div class="inbox">100% &nbsp;</div>
-        </div>
+        
     </div> 
 
     <div id="sec-c">
         <div class="sec-c-heading">
             <h1 >PROJECTS</h1>
-            <p class="reveal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, consequuntur.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, consequuntur.</p>
             <div class="sec-c-cont">
 
                 <div class="project">
@@ -116,7 +123,45 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
+
+    <div id="experience"></div>
+    <footer id="footer">
+        
+        <div class="exper-head">
+            <h1 >experience</h1>
+            <p>Skilled freelance frontend developer adept in HTML, CSS, and JavaScript frameworks, delivering tailored, responsive websites with intuitive user interfaces and optimal performance.</p>
+            <label for="">click below icons to check profile 	&darr;</label>
+        </div>
+        <div class="exper">
+            <a target="_blank" href="https://www.upwork.com/freelancers/~018003821ea5de9168"><img style="margin-bottom: 10%; margin-left: 5%;" src="./icons/upwork-removebg-preview.png" alt=""></a>
+
+            <a target="_blank" href="https://www.fiverr.com/s/Y8V17l"><img src="./icons/fivver-removebg-preview.png" alt=""></a>
+
+            <a target="_blank" href="https://www.freelancer.com/u/jaikumartjay1?sb=t"><img src="./icons/freeelancer-removebg-preview.png" alt=""></a>
+        </div>
+
+        <img style="width: 90%;" src="./2112.i301.031.S.m004.c13.UI_and_UX_designers_concepts_isometric_composition-removebg-preview.png" alt="">
+
+        <h1 id="contact" style="border-top: 0.5px dashed grey; width: 90%; " >contact</h1>
+        <p style="text-align: left; width: 90%;">Social Networks &#9755;</p>
+        <div class="social">
+            <a target="_blank" href="https://github.com/tjay1505"><img src="./icons/github.png" alt=""></a>
+            <a target="_blank" href="www.linkedin.com/in/jai-kumar-3a5759267"><img src="./icons/linkedin.png" alt=""></a>
+            
+            <a target="_blank" href="https://wa.me/message/BSLWZB33MTOOK1"><img src="./icons/whatsapp (1).png" alt=""></a>
+            <a target="_blank" href="tel:8608267904"><img src="./icons/phone-call.png" alt=""></a>
+        </div>
+        <p style="text-align: left; width: 90%;">E-mail Address &#9755;</p>
+        <form class="form">
+            <input type="email" placeholder="enter your e-mail" required>
+            <button id="btn-form" type="submit" >sumbit</button>
+        </form>
+
+        <div style="color: gray;" class="copyrights">
+            copyrights &#169; claimed@ | T-JAY
+        </div>
+    </footer>
 
     <script src="./venila.js"></script>
 </body>
