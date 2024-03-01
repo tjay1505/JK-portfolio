@@ -26,6 +26,7 @@ setTimeout(() => {
 setInterval(() => swipe.classList.add('addAnimeToSwipe') , 9000)
 
 function homeRefresh(){
+  
   location.reload()
 }
 
@@ -97,4 +98,15 @@ function reveal() {
     }
   }
 
-  
+const jklogo = document.getElementById('jklogo')
+
+function jk(){
+ 
+ for(var x = 1;x < 9;x++){
+  jklogo.style.animationDuration = x+"ms"
+  console.log(x);
+ }
+}
+
+console.log(jklogo.style.animationDuration);
+
