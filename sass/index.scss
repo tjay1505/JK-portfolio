@@ -6,6 +6,11 @@
 body{
     width: 100vw;
 }
+.bgc-text{
+    background: $color-bg;
+    padding: 2%;
+    border-radius: 2vmin;
+}
 .landing{
     //width: 100vw;
     height: 100vh;
@@ -17,7 +22,7 @@ body{
     .text{
         color: white;
         font-family:monospace;
-        margin-top: 10%;
+        margin: 10%;
         width: 90%;
         //border: 1px solid;
         display: flex;
@@ -75,6 +80,7 @@ body{
     }
     .imgBG{ 
         width: 90%;
+        margin-top: 5%;
         position:relative;
         animation: imgAnime 9s infinite ;
         transition: smooth ;
@@ -526,36 +532,38 @@ $color-bg:linear-gradient(240deg,rgb(0, 0, 57),rgb(28, 30, 129));
     .landing{
         
         .imgBG{
-            width: 60%;
+            width: 50%;
             position: absolute;
-            right: 35vw;
+            right: 50%;
         }
         .text{
             //border: 1pc solid black;
             width: auto;
             position: absolute;
-            top: 10vh;
-            left: 60vw;
+            top:5%;
+            font-size:4vmin;
+            left:40%;
+            
         }
         .swipe{
             display: none;
         }
         .t1,.t2,.t3{
             position: absolute;
-            left: 65vw;
+            left: 50%;
             width: auto;
             height: auto;
             //border: 1px solid;
         }
         .t1{
             margin-top: 0;
-            top:260px;
+            top:40%;
         }
         .t2{
-            top: 290px;
+            top: 42%;
         }
         .t3{
-            top: 320px;
+            top: 44%;
         }
     }
     #head{
@@ -597,7 +605,14 @@ $color-bg:linear-gradient(240deg,rgb(0, 0, 57),rgb(28, 30, 129));
         align-items: center;
         justify-content: space-evenly;
         p{
-            width: 50%;
+            width: 30%;
+            padding: 5%;
+            border-radius: 2vmin;
+            background:$color-bg;
+            color: white;
+            font-size: large;
+            border: 1px solid;
+            
         }
     }
     #sec-c{

@@ -19,7 +19,7 @@ body {
 .landing .text {
   color: white;
   font-family: monospace;
-  margin-top: 10%;
+  margin: 10%;
   width: 90%;
   display: flex;
   overflow: hidden;
@@ -71,6 +71,7 @@ body {
 }
 .landing .imgBG {
   width: 90%;
+  margin-top: 5%;
   position: relative;
   animation: imgAnime 9s infinite;
   transition: smooth;
@@ -473,34 +474,35 @@ body {
 
 @media only screen and (min-width: 900px) {
   .landing .imgBG {
-    width: 60%;
+    width: 50%;
     position: absolute;
-    right: 35vw;
+    right: 50%;
   }
   .landing .text {
     width: auto;
     position: absolute;
-    top: 10vh;
-    left: 60vw;
+    top: 5%;
+    font-size: 4vmin;
+    left: 40%;
   }
   .landing .swipe {
     display: none;
   }
   .landing .t1, .landing .t2, .landing .t3 {
     position: absolute;
-    left: 65vw;
+    left: 50%;
     width: auto;
     height: auto;
   }
   .landing .t1 {
     margin-top: 0;
-    top: 260px;
+    top: 40%;
   }
   .landing .t2 {
-    top: 290px;
+    top: 42%;
   }
   .landing .t3 {
-    top: 320px;
+    top: 44%;
   }
   #head ul {
     height: 100%;
@@ -538,7 +540,13 @@ body {
     justify-content: space-evenly;
   }
   .sec-b-head-desk p {
-    width: 50%;
+    width: 30%;
+    padding: 5%;
+    border-radius: 2vmin;
+    background: linear-gradient(240deg, rgb(0, 0, 57), rgb(28, 30, 129));
+    color: white;
+    font-size: large;
+    border: 1px solid;
   }
   .sec-c-cont {
     width: 70vw;
